@@ -14,6 +14,7 @@ public class ComputerController{
 	public Computador listaComputadores() {
 		
 		Computador pc1 = new Computador();
+
 		pc1.setId(1);
 		pc1.setProcessador("I7 10700");
 		pc1.setRam("16GB ddr4 3200mhz(2x8)");
