@@ -19,7 +19,7 @@ public class Questionario {
     @Id
     @Column(name = "idpergunta")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @NotNull
     @Column(name = "pergunta")

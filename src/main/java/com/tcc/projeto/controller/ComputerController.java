@@ -15,14 +15,13 @@ import java.util.List;
 public class ComputerController{
 
 	ComputadorService computadorService = new ComputadorService();
-	@GetMapping("/teste")
-	public Computador listaComputadores() {
+	@GetMapping("/")
+	public ResponseEntity<List<Computador>> buscaTodosOsComputadores(){
+		List<Computador> todos = computadorService.buscarTodosComputadores();
+		return ResponseEntity.ok(todos);
+	}
 
-//		@GetMapping("/")
-//		public ResponseEntity<List<Computador>> buscaTodosOsComputadores(){
-//			List<Computador> todos = computadorService.buscarTodosComputadores();
-//			return ResponseEntity.ok();
-//		}
+
 
 
 //		Computador pc1 = new Computador();
@@ -41,7 +40,6 @@ public class ComputerController{
 //
 //		System.out.println("Setado todos itens");
 //		return pc1;
-		return null;
-	}
+
 
 }
