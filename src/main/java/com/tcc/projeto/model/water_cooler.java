@@ -1,49 +1,41 @@
 package com.tcc.projeto.model;
 
+import com.sun.istack.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+@Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "water_cooler")
 public class water_cooler {
+
+    @Id
+    @Column(name = "idwater_cooler")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @NotNull
+    @Column(name = "marca")
     private String marca;
+
+    @NotNull
+    @Column(name = "modelo")
     private String modelo;
+
+    @NotNull
+    @Column(name = "tamanho")
     private String tamanho;
+
+    @NotNull
+    @Column(name = "preco")
     private String preco;
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public String getTamanho() {
-        return tamanho;
-    }
-
-    public void setTamanho(String tamanho) {
-        this.tamanho = tamanho;
-    }
-
-    public String getPreco() {
-        return preco;
-    }
-
-    public void setPreco(String preco) {
-        this.preco = preco;
-    }
 }

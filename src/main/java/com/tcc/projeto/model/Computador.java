@@ -1,87 +1,73 @@
 package com.tcc.projeto.model;
 
+import com.sun.istack.NotNull;
+import lombok.*;
+
+import javax.persistence.*;
+
+@Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "computadores")
 public class Computador {
 
-	private int id;
+	@Id
+	@Column(name = "idcomputadores")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+
+	@NotNull
+	@Column(name = "nome_pc")
+	private String nomeDoComputador;
+
+	@NotNull
+	@JoinColumn(name = "idprocessadores ")
 	private String processador;
+
+	@NotNull
+	@JoinColumn(name = "idmemoria_ram")
 	private String ram;
-	private String cooler;
+
+	@NotNull
+	@JoinColumn(name = "idwater_cooler")
+	private String waterCooler;
+
+	@NotNull
+	@JoinColumn(name = "idfontes")
 	private String fonte;
+
+	@NotNull
+	@JoinColumn(name = "idgpu")
 	private String placaDeVideo;
+
+	@NotNull
+	@JoinColumn(name = "idplaca_mae")
 	private String placaMae;
-	private String hdSsd;
+
+	@NotNull
+	@JoinColumn(name = "idhd")
+	private String hd;
+
+	@NotNull
+	@JoinColumn(name = "idssd")
+	private String ssd;
+
+	@NotNull
+	@JoinColumn(name = "idgabinete")
 	private String gabinete;
+
+	@NotNull
+	@Column(name = "preco")
 	private int valor;
-	private String descricao;
+
+	@NotNull
+	@Column(name = "pontos")
+	private int pontos;
+
 	
 	
-	// getters e setters 
-	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getProcessador() {
-		return processador;
-	}
-	public void setProcessador(String processador) {
-		this.processador = processador;
-	}
-	public String getRam() {
-		return ram;
-	}
-	public void setRam(String ram) {
-		this.ram = ram;
-	}
-	public String getCooler() {
-		return cooler;
-	}
-	public void setCooler(String cooler) {
-		this.cooler = cooler;
-	}
-	public String getFonte() {
-		return fonte;
-	}
-	public void setFonte(String fonte) {
-		this.fonte = fonte;
-	}
-	public String getPlacaDeVideo() {
-		return placaDeVideo;
-	}
-	public void setPlacaDeVideo(String placaDeVideo) {
-		this.placaDeVideo = placaDeVideo;
-	}
-	public String getPlacaMae() {
-		return placaMae;
-	}
-	public void setPlacaMae(String placaMae) {
-		this.placaMae = placaMae;
-	}
-	public String getHdSsd() {
-		return hdSsd;
-	}
-	public void setHdSsd(String hdSsd) {
-		this.hdSsd = hdSsd;
-	}
-	public String getGabinete() {
-		return gabinete;
-	}
-	public void setGabinete(String gabinete) {
-		this.gabinete = gabinete;
-	}
-	public int getValor() {
-		return valor;
-	}
-	public void setValor(int valor) {
-		this.valor = valor;
-	}
-	public String getDescricao() {
-		return descricao;
-	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
+
 	
 }

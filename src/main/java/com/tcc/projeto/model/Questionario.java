@@ -1,32 +1,43 @@
 package com.tcc.projeto.model;
 
+import com.sun.istack.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+@Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "questionario")
 public class Questionario {
 
+    @Id
+    @Column(name = "idpergunta")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @NotNull
+    @Column(name = "pergunta")
     private String pergunta;
+
+    @NotNull
+    @Column(name = "pontos")
     private String pontos;
 
-    public int getId() {
-        return id;
-    }
+    @NotNull
+    @Column(name = "dependencia")
+    private String dependencia;
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
-    public String getPergunta() {
-        return pergunta;
-    }
+    @NotNull
+    @Column(name = "status")
+    private String status;
 
-    public void setPergunta(String pergunta) {
-        this.pergunta = pergunta;
-    }
 
-    public String getPontos() {
-        return pontos;
-    }
 
-    public void setPontos(String pontos) {
-        this.pontos = pontos;
-    }
 }

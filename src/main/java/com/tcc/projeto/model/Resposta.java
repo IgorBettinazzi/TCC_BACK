@@ -1,32 +1,42 @@
 package com.tcc.projeto.model;
 
+import com.sun.istack.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import javax.persistence.*;
+
+@Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "resposta")
 public class Resposta {
 
+
+    @Id
+    @Column(name = "id_respostas")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @NotNull
+    @Column(name = "nome_usuario")
     private String nome_usuario;
+
+    @NotNull
+    @Column(name = "soma")
     private double soma;
+
+    @NotNull
+    @Column(name = "media")
     private double media;
 
-    public String getNome_usuario() {
-        return nome_usuario;
-    }
+    @NotNull
+    @Column(name = "idpergunta")
+    private double idpergunta;
 
-    public void setNome_usuario(String nome_usuario) {
-        this.nome_usuario = nome_usuario;
-    }
 
-    public double getSoma() {
-        return soma;
-    }
-
-    public void setSoma(double soma) {
-        this.soma = soma;
-    }
-
-    public double getMedia() {
-        return media;
-    }
-
-    public void setMedia(double media) {
-        this.media = media;
-    }
 }
