@@ -13,8 +13,6 @@ public class ComputadorService {
     @Autowired
     private ComputadorRepository computadorRepository;
 
-    @Autowired
-    private ComputadorService computadorService;
 
     public List<Computador> buscarTodosComputadores(){
         return computadorRepository.findAll();
