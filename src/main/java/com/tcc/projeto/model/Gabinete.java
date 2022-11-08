@@ -13,11 +13,11 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "fontes")
-public class fontes {
+@Table(name = "gabinete")
+public class Gabinete {
 
     @Id
-    @Column(name = "idfontes")
+    @Column(name = "idgabinete")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -26,12 +26,8 @@ public class fontes {
     private String marca;
 
     @NotNull
-    @Column(name = "modelo")
-    private String modelo;
-
-    @NotNull
-    @Column(name = "watts")
-    private String watts;
+    @Column(name = "tamanho")
+    private String tamanho;
 
     @NotNull
     @Column(name = "preco")

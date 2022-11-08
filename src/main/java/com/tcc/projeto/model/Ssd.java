@@ -14,7 +14,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "ssd")
-public class ssd {
+public class Ssd {
 
     @Id
     @Column(name = "idssd")

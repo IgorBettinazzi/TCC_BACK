@@ -13,11 +13,12 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "gpu")
-public class gpu {
+@Table(name = "placa_mae")
+public class PlacaMae {
+
 
     @Id
-    @Column(name = "idgpu")
+    @Column(name = "idplaca_mae")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -25,18 +26,16 @@ public class gpu {
     @Column(name = "marca")
     private String marca;
 
+    @NotNull
+    @Column(name = "tipo-placa")
+    private String tipoPlaca;
 
     @NotNull
     @Column(name = "modelo")
     private String modelo;
 
     @NotNull
-    @Column(name = "vram")
-    private String vram;
-
-    @NotNull
     @Column(name = "preco")
     private String preco;
-
 
 }

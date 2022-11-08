@@ -13,11 +13,11 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "processadores")
+@Table(name = "processador")
 public class Processador {
 
     @Id
-    @Column(name = "idprocessadores")
+    @Column(name = "idprocessador")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 

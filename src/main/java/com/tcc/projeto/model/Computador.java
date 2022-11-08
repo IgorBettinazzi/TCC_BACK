@@ -10,11 +10,11 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "computadores")
+@Table(name = "computador")
 public class Computador {
 
 	@Id
-	@Column(name = "idcomputadores")
+	@Column(name = "idcomputador")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
@@ -23,48 +23,57 @@ public class Computador {
 	private String nomeDoComputador;
 
 	@NotNull
-	@JoinColumn(name = "idprocessadores ")
-	private String processador;
+	@ManyToOne
+	@JoinColumn(name = "idprocessador")
+	private Processador processador;
 
 	@NotNull
+	@ManyToOne
 	@JoinColumn(name = "idmemoria_ram")
-	private String ram;
+	private MemoriaRam ram;
 
 	@NotNull
+	@ManyToOne
 	@JoinColumn(name = "idwater_cooler")
-	private String waterCooler;
+	private WaterCooler waterCooler;
 
 	@NotNull
-	@JoinColumn(name = "idfontes")
-	private String fonte;
-
-	@NotNull
-	@JoinColumn(name = "idgpu")
-	private String placaDeVideo;
-
-	@NotNull
-	@JoinColumn(name = "idplaca_mae")
-	private String placaMae;
-
-	@NotNull
-	@JoinColumn(name = "idhd")
-	private String hd;
-
-	@NotNull
-	@JoinColumn(name = "idssd")
-	private String ssd;
-
-	@NotNull
+	@ManyToOne
 	@JoinColumn(name = "idgabinete")
-	private String gabinete;
+	private Gabinete gabinete;
+
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "idgpu")
+	private Gpu placaDeVideo;
+
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "idplaca_mae")
+	private PlacaMae placaMae;
+
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "idhd")
+	private Hd hd;
+
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "idssd")
+	private Ssd ssd;
+
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "idfonte")
+	private Fonte fonte;
 
 	@NotNull
 	@Column(name = "preco")
 	private int valor;
 
 	@NotNull
-	@Column(name = "pontos")
-	private int pontos;
+	@Column(name = "ponto")
+	private int ponto;
 
 	
 	

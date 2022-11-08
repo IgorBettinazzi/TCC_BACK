@@ -13,12 +13,11 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "placa_mae")
-public class placa_mae {
-
+@Table(name = "water_cooler")
+public class WaterCooler {
 
     @Id
-    @Column(name = "idplaca_mae")
+    @Column(name = "idwater_cooler")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -27,15 +26,16 @@ public class placa_mae {
     private String marca;
 
     @NotNull
-    @Column(name = "tipo-placa")
-    private String tipoPlaca;
-
-    @NotNull
     @Column(name = "modelo")
     private String modelo;
 
     @NotNull
+    @Column(name = "tamanho")
+    private String tamanho;
+
+    @NotNull
     @Column(name = "preco")
     private String preco;
+
 
 }

@@ -26,8 +26,8 @@ public class Questionario {
     private String pergunta;
 
     @NotNull
-    @Column(name = "pontos")
-    private String pontos;
+    @Column(name = "ponto")
+    private String ponto;
 
     @NotNull
     @Column(name = "dependencia")

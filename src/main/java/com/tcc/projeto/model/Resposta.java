@@ -18,7 +18,7 @@ public class Resposta {
 
 
     @Id
-    @Column(name = "id_respostas")
+    @Column(name = "id_resposta")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -35,8 +35,9 @@ public class Resposta {
     private double media;
 
     @NotNull
-    @Column(name = "idpergunta")
-    private double idpergunta;
+    @ManyToOne
+    @JoinColumn(name = "idpergunta")
+    private Questionario idpergunta;
 
 
 }
