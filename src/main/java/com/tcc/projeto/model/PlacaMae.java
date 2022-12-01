@@ -27,7 +27,7 @@ public class PlacaMae {
     private String marca;
 
     @NotNull
-    @Column(name = "tipo-placa")
+    @Column(name = "tipo")
     private String tipoPlaca;
 
     @NotNull
