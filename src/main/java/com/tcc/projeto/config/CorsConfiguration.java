@@ -1,4 +1,4 @@
-package com.tcc.projeto;
+package com.tcc.projeto.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -8,9 +8,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class CorsConfiguration implements WebMvcConfigurer {
 
     @Override
-    public void addCorsMappings(CorsRegistry registry){
+    public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:9999")
-                .allowedMethods("GET", "OPTIONS", "HEAD", "TRACE", "CONNECT");
+                .allowedOrigins("http://localhost:4200/")
+                .allowedMethods("GET", "PATCH", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT");
     }
 }
