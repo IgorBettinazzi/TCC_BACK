@@ -72,7 +72,7 @@ public class Computador {
 	private int valor;
 
 	@NotNull
-	@Column(name = "ponto")
+	@Column(name = "pontos")
 	private int ponto;
 
 	
