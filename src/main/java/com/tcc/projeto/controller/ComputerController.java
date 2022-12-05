@@ -23,7 +23,7 @@ public class ComputerController{
 		return ResponseEntity.ok(todos);
 	}
 
-
+}
 
 
 //		Computador pc1 = new Computador();
@@ -44,4 +44,4 @@ public class ComputerController{
 //		return pc1;
 
 
-}
+
